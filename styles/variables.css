@@ -3,5 +3,17 @@
   и их переопределение под различные устройства
 */
 :root{
-  --accent-color:#ff8dcb;;
+  --color-big-title:#DB00FF;  
+  --color-bold-title:#FF0070;
+  --bold-fonts:700;
+  --normal:400px; 
+  --font-family:IBM Plex Mono;
+  --line-height:23.4px;
+  --font-size:18px;
+  --color-text:#F1B2CE;
+  --hover:rgba(255, 0, 112, 0.40);
+  --recc:'REC';
+  --circle:9px;
+  --button:#FF0070;
+  --content-title:#FF0070;
 }
