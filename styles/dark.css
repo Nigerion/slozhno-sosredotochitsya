@@ -37,7 +37,6 @@
   max-width: 1024px;
 
 }
-/* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
 
 .header{
   height: 100vh;
@@ -192,13 +191,14 @@
 
 .what{
   display: grid;
-  row-gap: 20px;;
+  row-gap: 20px;
 }
 
 .what__title{
    display: grid;
    grid-template-columns: repeat( 3 ,1fr);
    grid-column: 1/3;
+   gap: 10px;
 }
 
 .what__content{
@@ -216,7 +216,9 @@
 
 .how__content{
   grid-area:p;
+  display: grid;
   gap: 20px;
+  
 }
 
 .how__title{
@@ -230,7 +232,7 @@
 .pictures{
   display: grid;
   grid-template-columns: repeat(3 ,1fr);
-  grid-template-rows: 23px 0.825fr 1fr 1.35fr;
+  grid-template-rows: 23px 0.825fr 1fr 1.37fr;
   grid-template-areas: 'i i i' 'a a b' 'c d b ' 'c v v' ;
   gap: 20px; 
 }
@@ -281,7 +283,7 @@
   justify-content: center;
   align-items: center;
   position: relative;
-  margin: 20px;
+  border: 1px solid red;
 }
 
 .footer::after{
@@ -290,8 +292,8 @@
   height: 25px;
   border-top: 1px solid var(--corner) ;
   border-right:1px solid var(--corner);
-  inset-block-start: 0;
-  inset-inline-end: 0;
+  inset-block-start: 18px;
+  inset-inline-end: 20px;
   position: absolute;  
 }
 
@@ -301,8 +303,8 @@
   height: 25px;
   border-bottom: 1px solid var(--corner) ;
   border-left:1px solid var(--corner);
-  inset-inline-start: 0;
-  inset-block-end: 0;
+  inset-inline-start: 20px;
+  inset-block-end: 21px;
   position: absolute;
 }
 
@@ -429,18 +431,29 @@
     grid-area: m;
     display: flex;
     justify-content: center; 
+  }
 
+  .why{
+    display: grid;
+    grid-template-columns:repeat(3 ,1fr);
+    grid-template-areas: "title p p" ;
+    gap: 20px 35px;
   }
 
   .what__content{
     grid-template-columns: repeat(1 ,1fr);
-    grid-template-rows: repeat(3 , 1fr);
+    grid-template-rows: 174px 174px 197px;
   }
 
   .what{
     gap: 20px 0;
   }
+
+  .how__content{
+    margin-left: 5px;
+  }
 }
+
 @media (width<=520px){
   .header{
     padding: 10px 10px 0 10px;
@@ -473,7 +486,7 @@
   }
 
   .header::after{
-    content: var(--point);
+    content:var(--point);
     border-radius: 50%;
     width: 9px;
     height: 9px;
@@ -523,9 +536,10 @@
     grid-template-areas: "le le le" "p p p " ;
     gap: 20px;
   }
-
+  
   .pictures{
     grid-template-columns: repeat(1 , 1fr);
+    grid-template-rows:24px 1fr 2.5fr 1.67fr 2.5fr 1.67fr ;
     grid-template-areas: 'i' 'a ' 'b' 'c' 'd' 'v'  ;
     gap: 10px;
   }
@@ -535,7 +549,9 @@
     grid-template-columns: 1fr;
   }
 
-
+  .how__content{
+    margin-left: 0;
+  }
   .what{
    gap:20;
   }
@@ -543,5 +559,9 @@
   .what__content{
     grid-template-columns: repeat(1 ,1fr);
     grid-template-rows: 1fr;
+  }
+
+  .footer{
+    margin: 10px;
   }
 }
